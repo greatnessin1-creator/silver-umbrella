@@ -1,4 +1,5 @@
 from fastapi import FastAPI, APIRouter, Request
+from fastapi.responses import FileResponse
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -70,6 +71,19 @@ def serialize_doc(doc):
         else:
             result[key] = value
     return result
+
+
+@api_router.get("/download/project")
+async def download_project():
+    """Download the full project as a zip file"""
+    zip_path = Path("/app/puralivn-landing-page.zip")
+    if zip_path.exists():
+        return FileResponse(
+            path=str(zip_path),
+            filename="puralivn-landing-page.zip",
+            media_type="application/zip"
+        )
+    return {"error": "File not found"}
 
 # --- Routes ---
 @api_router.get("/")
