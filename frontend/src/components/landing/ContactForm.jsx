@@ -68,7 +68,7 @@ export const ContactForm = () => {
     <section
       id="contact"
       data-testid="contact-section"
-      className="relative bg-[hsl(var(--sand))] noise-overlay"
+      className="relative bg-[hsl(var(--secondary))] noise-overlay"
     >
       <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
@@ -80,13 +80,13 @@ export const ContactForm = () => {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.6 }}
           >
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-[hsl(var(--gold))] mb-4">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-[hsl(var(--rose-primary))] mb-4">
               Get in Touch
             </p>
             <h2 className="font-display text-3xl sm:text-4xl font-medium tracking-[-0.01em] text-[hsl(var(--foreground))] mb-6">
               Contact Us
             </h2>
-            <div className="gold-line mb-8" />
+            <div className="rose-line mb-8" />
             <p className="font-body text-sm text-[hsl(var(--muted-foreground))] leading-relaxed mb-8">
               Have a question about our products or need help with your order? We'd love to
               hear from you. Send us a message and our team will get back to you promptly.
@@ -94,8 +94,8 @@ export const ContactForm = () => {
 
             <div className="space-y-5">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[hsl(var(--gold-soft))] flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-4 h-4 text-[hsl(var(--gold))]" strokeWidth={1.5} />
+                <div className="w-10 h-10 rounded-full bg-[hsl(var(--rose-soft))] flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-4 h-4 text-[hsl(var(--rose-primary))]" strokeWidth={1.5} />
                 </div>
                 <div>
                   <p className="font-body text-sm font-medium text-[hsl(var(--foreground))]">Email</p>
@@ -103,8 +103,8 @@ export const ContactForm = () => {
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[hsl(var(--gold-soft))] flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-4 h-4 text-[hsl(var(--gold))]" strokeWidth={1.5} />
+                <div className="w-10 h-10 rounded-full bg-[hsl(var(--rose-soft))] flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-4 h-4 text-[hsl(var(--rose-primary))]" strokeWidth={1.5} />
                 </div>
                 <div>
                   <p className="font-body text-sm font-medium text-[hsl(var(--foreground))]">Response Time</p>
@@ -112,8 +112,8 @@ export const ContactForm = () => {
                 </div>
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[hsl(var(--gold-soft))] flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-4 h-4 text-[hsl(var(--gold))]" strokeWidth={1.5} />
+                <div className="w-10 h-10 rounded-full bg-[hsl(var(--rose-soft))] flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-4 h-4 text-[hsl(var(--rose-primary))]" strokeWidth={1.5} />
                 </div>
                 <div>
                   <p className="font-body text-sm font-medium text-[hsl(var(--foreground))]">Hours</p>
@@ -131,12 +131,12 @@ export const ContactForm = () => {
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
-            <Card className="rounded-2xl bg-[hsl(var(--card))] border border-[hsl(var(--border))] shadow-[0_10px_30px_-18px_rgba(20,16,12,0.35)]">
+            <Card className="rounded-2xl bg-white border border-[hsl(var(--border))] shadow-[0_10px_30px_-18px_rgba(20,16,12,0.2)]">
               <CardContent className="p-6 sm:p-8">
                 {submitted ? (
                   <div data-testid="contact-form-status" className="text-center py-12">
-                    <div className="w-16 h-16 rounded-full bg-[hsl(var(--gold-soft))] flex items-center justify-center mx-auto mb-5">
-                      <Send className="w-7 h-7 text-[hsl(var(--gold))]" strokeWidth={1.5} />
+                    <div className="w-16 h-16 rounded-full bg-[hsl(var(--rose-soft))] flex items-center justify-center mx-auto mb-5">
+                      <Send className="w-7 h-7 text-[hsl(var(--rose-primary))]" strokeWidth={1.5} />
                     </div>
                     <h3 className="font-display text-2xl font-medium text-[hsl(var(--foreground))] mb-3">
                       Message Sent!
@@ -146,7 +146,7 @@ export const ContactForm = () => {
                     </p>
                     <Button
                       variant="outline"
-                      className="border-[hsl(var(--gold)/0.35)] text-[hsl(var(--foreground))] hover:bg-[hsl(var(--gold-soft)/0.35)] rounded-xl font-body"
+                      className="border-[hsl(var(--rose-primary)/0.35)] text-[hsl(var(--foreground))] hover:bg-[hsl(var(--rose-soft)/0.5)] rounded-xl font-body"
                       onClick={() => setSubmitted(false)}
                     >
                       Send Another Message
@@ -175,7 +175,7 @@ export const ContactForm = () => {
                           value={formData.name}
                           onChange={handleChange}
                           placeholder="Your name"
-                          className={`rounded-xl border-[hsl(var(--border))] font-body text-sm focus-visible:ring-[hsl(var(--gold)/0.45)] ${errors.name ? 'border-red-400' : ''}`}
+                          className={`rounded-xl border-[hsl(var(--border))] font-body text-sm focus-visible:ring-[hsl(var(--rose-primary)/0.45)] ${errors.name ? 'border-red-400' : ''}`}
                         />
                         {errors.name && <p className="font-body text-xs text-red-500">{errors.name}</p>}
                       </div>
@@ -190,7 +190,7 @@ export const ContactForm = () => {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="your@email.com"
-                          className={`rounded-xl border-[hsl(var(--border))] font-body text-sm focus-visible:ring-[hsl(var(--gold)/0.45)] ${errors.email ? 'border-red-400' : ''}`}
+                          className={`rounded-xl border-[hsl(var(--border))] font-body text-sm focus-visible:ring-[hsl(var(--rose-primary)/0.45)] ${errors.email ? 'border-red-400' : ''}`}
                         />
                         {errors.email && <p className="font-body text-xs text-red-500">{errors.email}</p>}
                       </div>
@@ -206,7 +206,7 @@ export const ContactForm = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="(555) 000-0000"
-                        className="rounded-xl border-[hsl(var(--border))] font-body text-sm focus-visible:ring-[hsl(var(--gold)/0.45)]"
+                        className="rounded-xl border-[hsl(var(--border))] font-body text-sm focus-visible:ring-[hsl(var(--rose-primary)/0.45)]"
                       />
                     </div>
 
@@ -220,7 +220,7 @@ export const ContactForm = () => {
                         onChange={handleChange}
                         placeholder="How can we help you?"
                         rows={4}
-                        className={`rounded-xl border-[hsl(var(--border))] font-body text-sm focus-visible:ring-[hsl(var(--gold)/0.45)] resize-none ${errors.message ? 'border-red-400' : ''}`}
+                        className={`rounded-xl border-[hsl(var(--border))] font-body text-sm focus-visible:ring-[hsl(var(--rose-primary)/0.45)] resize-none ${errors.message ? 'border-red-400' : ''}`}
                       />
                       {errors.message && <p className="font-body text-xs text-red-500">{errors.message}</p>}
                     </div>
@@ -229,7 +229,7 @@ export const ContactForm = () => {
                       data-testid="contact-submit-button"
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary)/0.92)] rounded-xl py-6 text-sm font-body font-semibold tracking-wide transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                      className="w-full bg-[hsl(var(--rose-medium))] text-white hover:bg-[hsl(var(--rose-medium)/0.9)] rounded-xl py-6 text-sm font-body font-semibold tracking-wide transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                     >
                       {isSubmitting ? (
                         <span className="flex items-center gap-2">

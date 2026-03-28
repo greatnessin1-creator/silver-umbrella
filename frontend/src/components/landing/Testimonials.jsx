@@ -46,7 +46,7 @@ export const Testimonials = () => {
   return (
     <section
       data-testid="testimonials-section"
-      className="relative bg-[hsl(var(--sand))] noise-overlay"
+      className="relative bg-[hsl(var(--secondary))] noise-overlay"
     >
       <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
         <motion.div
@@ -56,13 +56,13 @@ export const Testimonials = () => {
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-[hsl(var(--gold))] mb-4">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-[hsl(var(--rose-primary))] mb-4">
             Real Results
           </p>
           <h2 className="font-display text-3xl sm:text-4xl font-medium tracking-[-0.01em] text-[hsl(var(--foreground))]">
             Real People, Real Confidence
           </h2>
-          <div className="gold-line mx-auto mt-6" />
+          <div className="rose-line mx-auto mt-6" />
         </motion.div>
 
         {/* Desktop: 3 cards */}
@@ -76,9 +76,9 @@ export const Testimonials = () => {
               viewport={{ once: true, margin: '-30px' }}
               transition={{ duration: 0.5, delay: index * 0.12 }}
             >
-              <Card className="rounded-2xl bg-[hsl(var(--card))] border border-[hsl(var(--border))] shadow-[0_10px_30px_-18px_rgba(20,16,12,0.35)] transition-all duration-300 hover:border-[hsl(var(--gold)/0.35)] h-full">
+              <Card className="rounded-2xl bg-white border border-[hsl(var(--border))] shadow-[0_10px_30px_-18px_rgba(20,16,12,0.2)] transition-all duration-300 hover:border-[hsl(var(--rose-primary)/0.35)] h-full">
                 <CardContent className="p-6 sm:p-8 flex flex-col h-full">
-                  <Quote className="w-8 h-8 text-[hsl(var(--gold)/0.3)] mb-4" strokeWidth={1} />
+                  <Quote className="w-8 h-8 text-[hsl(var(--rose-primary)/0.3)] mb-4" strokeWidth={1} />
                   <StarRating />
                   <h3 className="font-display text-lg font-medium text-[hsl(var(--foreground))] mt-4 mb-3">
                     "{t.headline}"
@@ -90,7 +90,7 @@ export const Testimonials = () => {
                     <p className="font-body text-sm font-semibold text-[hsl(var(--foreground))]">
                       {t.name}
                     </p>
-                    <p className="font-body text-xs text-[hsl(var(--gold))]">
+                    <p className="font-body text-xs text-[hsl(var(--rose-primary))]">
                       Verified Customer
                     </p>
                   </div>
@@ -111,9 +111,9 @@ export const Testimonials = () => {
               exit={{ opacity: 0, x: -30 }}
               transition={{ duration: 0.35 }}
             >
-              <Card className="rounded-2xl bg-[hsl(var(--card))] border border-[hsl(var(--border))] shadow-[0_10px_30px_-18px_rgba(20,16,12,0.35)]">
+              <Card className="rounded-2xl bg-white border border-[hsl(var(--border))] shadow-[0_10px_30px_-18px_rgba(20,16,12,0.2)]">
                 <CardContent className="p-6">
-                  <Quote className="w-8 h-8 text-[hsl(var(--gold)/0.3)] mb-4" strokeWidth={1} />
+                  <Quote className="w-8 h-8 text-[hsl(var(--rose-primary)/0.3)] mb-4" strokeWidth={1} />
                   <StarRating />
                   <h3 className="font-display text-lg font-medium text-[hsl(var(--foreground))] mt-4 mb-3">
                     "{testimonials[current].headline}"
@@ -125,7 +125,7 @@ export const Testimonials = () => {
                     <p className="font-body text-sm font-semibold text-[hsl(var(--foreground))]">
                       {testimonials[current].name}
                     </p>
-                    <p className="font-body text-xs text-[hsl(var(--gold))]">
+                    <p className="font-body text-xs text-[hsl(var(--rose-primary))]">
                       Verified Customer
                     </p>
                   </div>
@@ -137,7 +137,7 @@ export const Testimonials = () => {
           <div className="flex justify-center gap-4 mt-6">
             <button
               onClick={prev}
-              className="w-10 h-10 rounded-full border border-[hsl(var(--border))] flex items-center justify-center hover:border-[hsl(var(--gold)/0.35)] transition-colors"
+              className="w-10 h-10 rounded-full border border-[hsl(var(--border))] flex items-center justify-center hover:border-[hsl(var(--rose-primary)/0.35)] transition-colors"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-4 h-4" strokeWidth={1.5} />
@@ -149,7 +149,7 @@ export const Testimonials = () => {
                   onClick={() => setCurrent(i)}
                   className={`w-2 h-2 rounded-full transition-colors duration-200 ${
                     i === current
-                      ? 'bg-[hsl(var(--gold))]'
+                      ? 'bg-[hsl(var(--rose-primary))]'
                       : 'bg-[hsl(var(--border))]'
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}
@@ -158,7 +158,7 @@ export const Testimonials = () => {
             </div>
             <button
               onClick={next}
-              className="w-10 h-10 rounded-full border border-[hsl(var(--border))] flex items-center justify-center hover:border-[hsl(var(--gold)/0.35)] transition-colors"
+              className="w-10 h-10 rounded-full border border-[hsl(var(--border))] flex items-center justify-center hover:border-[hsl(var(--rose-primary)/0.35)] transition-colors"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-4 h-4" strokeWidth={1.5} />

@@ -30,7 +30,7 @@ export const BlogHighlights = () => {
   return (
     <section
       data-testid="blog-section"
-      className="relative bg-[hsl(var(--background))]"
+      className="relative bg-white"
     >
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
         <motion.div
@@ -41,19 +41,19 @@ export const BlogHighlights = () => {
           transition={{ duration: 0.6 }}
         >
           <div>
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-[hsl(var(--gold))] mb-4">
+            <p className="font-body text-xs tracking-[0.2em] uppercase text-[hsl(var(--rose-primary))] mb-4">
               From Our Blog
             </p>
             <h2 className="font-display text-3xl sm:text-4xl font-medium tracking-[-0.01em] text-[hsl(var(--foreground))]">
               Self-Care Insights
             </h2>
-            <div className="gold-line mt-6" />
+            <div className="rose-line mt-6" />
           </div>
           <a
             href="https://puralivn.com/blogs/news"
             target="_blank"
             rel="noreferrer"
-            className="font-body text-sm text-[hsl(var(--gold))] animated-underline inline-flex items-center gap-1 self-start sm:self-auto"
+            className="font-body text-sm text-[hsl(var(--rose-primary))] animated-underline inline-flex items-center gap-1 self-start sm:self-auto"
           >
             View all posts
             <ArrowUpRight className="w-3.5 h-3.5" strokeWidth={1.5} />
@@ -77,9 +77,9 @@ export const BlogHighlights = () => {
                 data-testid="blog-read-link"
                 aria-label={`Read: ${post.title}`}
               >
-                <Card className="group rounded-2xl bg-[hsl(var(--card))] border border-[hsl(var(--border))] shadow-[0_10px_30px_-18px_rgba(20,16,12,0.35)] transition-all duration-300 hover:border-[hsl(var(--gold)/0.35)] hover:shadow-[0_18px_50px_-26px_rgba(20,16,12,0.45)] overflow-hidden h-full">
+                <Card className="group rounded-2xl bg-white border border-[hsl(var(--border))] shadow-[0_10px_30px_-18px_rgba(20,16,12,0.2)] transition-all duration-300 hover:border-[hsl(var(--rose-primary)/0.35)] hover:shadow-[0_18px_50px_-26px_rgba(20,16,12,0.35)] overflow-hidden h-full">
                   <div className="overflow-hidden">
-                    <div className="aspect-[16/9] bg-[hsl(var(--sand))]">
+                    <div className="aspect-[16/9] bg-[hsl(var(--secondary))]">
                       <img
                         src={post.image}
                         alt={post.alt}
@@ -89,16 +89,16 @@ export const BlogHighlights = () => {
                     </div>
                   </div>
                   <CardContent className="p-5 sm:p-6">
-                    <Badge className="bg-[hsl(var(--gold-soft))] text-[hsl(var(--espresso))] border-none font-body text-xs font-medium px-3 py-1 mb-3">
+                    <Badge className="bg-[hsl(var(--rose-soft))] text-[hsl(var(--plum))] border-none font-body text-xs font-medium px-3 py-1 mb-3">
                       {post.category}
                     </Badge>
-                    <h3 className="font-display text-xl font-medium text-[hsl(var(--foreground))] mb-2 group-hover:text-[hsl(var(--gold))] transition-colors duration-200">
+                    <h3 className="font-display text-xl font-medium text-[hsl(var(--foreground))] mb-2 group-hover:text-[hsl(var(--rose-primary))] transition-colors duration-200">
                       {post.title}
                     </h3>
                     <p className="font-body text-sm text-[hsl(var(--muted-foreground))] leading-relaxed line-clamp-2">
                       {post.excerpt}
                     </p>
-                    <span className="inline-flex items-center gap-1 mt-4 font-body text-sm text-[hsl(var(--gold))] animated-underline">
+                    <span className="inline-flex items-center gap-1 mt-4 font-body text-sm text-[hsl(var(--rose-primary))] animated-underline">
                       Read article
                       <ArrowUpRight className="w-3.5 h-3.5" strokeWidth={1.5} />
                     </span>

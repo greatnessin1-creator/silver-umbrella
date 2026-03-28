@@ -19,22 +19,22 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer data-testid="footer" className="bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))]">
+    <footer data-testid="footer" className="bg-[hsl(var(--plum))] text-white">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-14 sm:py-18 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="md:col-span-1">
-            <h3 className="font-display text-2xl font-medium mb-4 text-[hsl(var(--gold))]">
+            <h3 className="font-display text-2xl font-medium mb-4 text-[hsl(var(--rose-primary))]">
               Pura Livn
             </h3>
-            <p className="font-body text-sm text-[hsl(var(--primary-foreground)/0.7)] leading-relaxed">
+            <p className="font-body text-sm text-white/70 leading-relaxed">
               Empowering confidence through self-care. Premium body care products for your daily beauty ritual.
             </p>
           </div>
 
           {/* Shop Links */}
           <div>
-            <h4 className="font-body text-xs tracking-[0.15em] uppercase text-[hsl(var(--gold))] mb-5">
+            <h4 className="font-body text-xs tracking-[0.15em] uppercase text-[hsl(var(--rose-primary))] mb-5">
               Shop
             </h4>
             <ul className="space-y-3">
@@ -44,9 +44,9 @@ export const Footer = () => {
                     href={link.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="font-body text-sm text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--gold))] transition-colors duration-200 inline-flex items-center gap-1"
+                    className="font-body text-sm text-white/70 hover:text-[hsl(var(--rose-primary))] transition-colors duration-200 inline-flex items-center gap-1"
                   >
-                    <span className="w-1 h-1 rounded-full bg-[hsl(var(--gold)/0.4)] flex-shrink-0" />
+                    <span className="w-1 h-1 rounded-full bg-[hsl(var(--rose-primary)/0.4)] flex-shrink-0" />
                     {link.label}
                   </a>
                 </li>
@@ -56,7 +56,7 @@ export const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h4 className="font-body text-xs tracking-[0.15em] uppercase text-[hsl(var(--gold))] mb-5">
+            <h4 className="font-body text-xs tracking-[0.15em] uppercase text-[hsl(var(--rose-primary))] mb-5">
               Company
             </h4>
             <ul className="space-y-3">
@@ -65,9 +65,9 @@ export const Footer = () => {
                   <a
                     href={link.url}
                     {...(link.external ? { target: '_blank', rel: 'noreferrer' } : {})}
-                    className="font-body text-sm text-[hsl(var(--primary-foreground)/0.7)] hover:text-[hsl(var(--gold))] transition-colors duration-200 inline-flex items-center gap-1"
+                    className="font-body text-sm text-white/70 hover:text-[hsl(var(--rose-primary))] transition-colors duration-200 inline-flex items-center gap-1"
                   >
-                    <span className="w-1 h-1 rounded-full bg-[hsl(var(--gold)/0.4)] flex-shrink-0" />
+                    <span className="w-1 h-1 rounded-full bg-[hsl(var(--rose-primary)/0.4)] flex-shrink-0" />
                     {link.label}
                     {link.external && <ExternalLink className="w-3 h-3 ml-0.5" strokeWidth={1.5} />}
                   </a>
@@ -78,10 +78,10 @@ export const Footer = () => {
 
           {/* Social / Newsletter CTA */}
           <div>
-            <h4 className="font-body text-xs tracking-[0.15em] uppercase text-[hsl(var(--gold))] mb-5">
+            <h4 className="font-body text-xs tracking-[0.15em] uppercase text-[hsl(var(--rose-primary))] mb-5">
               Stay Connected
             </h4>
-            <p className="font-body text-sm text-[hsl(var(--primary-foreground)/0.7)] leading-relaxed mb-4">
+            <p className="font-body text-sm text-white/70 leading-relaxed mb-4">
               Follow us for skincare tips, exclusive offers, and self-care inspiration.
             </p>
             <div className="flex gap-3">
@@ -89,25 +89,25 @@ export const Footer = () => {
                 href="https://puralivn.com"
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full border border-[hsl(var(--gold)/0.3)] flex items-center justify-center hover:bg-[hsl(var(--gold)/0.15)] transition-colors duration-200"
+                className="w-9 h-9 rounded-full border border-[hsl(var(--rose-primary)/0.3)] flex items-center justify-center hover:bg-[hsl(var(--rose-primary)/0.15)] transition-colors duration-200"
                 aria-label="Visit Pura Livn website"
               >
-                <ExternalLink className="w-4 h-4 text-[hsl(var(--gold))]" strokeWidth={1.5} />
+                <ExternalLink className="w-4 h-4 text-[hsl(var(--rose-primary))]" strokeWidth={1.5} />
               </a>
             </div>
           </div>
         </div>
 
-        <Separator className="my-10 bg-[hsl(var(--primary-foreground)/0.1)]" />
+        <Separator className="my-10 bg-white/10" />
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-body text-[hsl(var(--primary-foreground)/0.5)]">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-body text-white/50">
           <p>&copy; {currentYear} Pura Livn LLC. All rights reserved.</p>
           <div className="flex gap-4">
             <a
               href="https://puralivn.com/policies/privacy-policy"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[hsl(var(--gold))] transition-colors"
+              className="hover:text-[hsl(var(--rose-primary))] transition-colors"
             >
               Privacy Policy
             </a>
@@ -115,7 +115,7 @@ export const Footer = () => {
               href="https://puralivn.com/policies/terms-of-service"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[hsl(var(--gold))] transition-colors"
+              className="hover:text-[hsl(var(--rose-primary))] transition-colors"
             >
               Terms of Service
             </a>
@@ -123,7 +123,7 @@ export const Footer = () => {
               href="https://puralivn.com/policies/refund-policy"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-[hsl(var(--gold))] transition-colors"
+              className="hover:text-[hsl(var(--rose-primary))] transition-colors"
             >
               Refund Policy
             </a>

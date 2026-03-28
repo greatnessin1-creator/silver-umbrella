@@ -1,4 +1,4 @@
-/* Pura Livn - Luxury Landing Page Styles */
+/* Pura Livn - Pink/Rose Landing Page Styles */
 
 /* Font display utility */
 .font-display {
@@ -9,14 +9,14 @@
   font-family: var(--font-body);
 }
 
-/* Gold text */
-.text-gold {
-  color: hsl(var(--gold));
+/* Rose/Pink text */
+.text-rose-brand {
+  color: hsl(var(--rose-primary));
 }
 
 /* Animated underline for links */
 .animated-underline {
-  background-image: linear-gradient(hsl(var(--gold)), hsl(var(--gold)));
+  background-image: linear-gradient(hsl(var(--rose-primary)), hsl(var(--rose-primary)));
   background-size: 0% 1px;
   background-position: left bottom;
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.03;
+  opacity: 0.02;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 0;
@@ -40,18 +40,8 @@
 
 /* Star rating */
 .star-filled {
-  color: hsl(var(--gold));
-  fill: hsl(var(--gold));
-}
-
-/* Promo bar marquee animation */
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-marquee {
-  animation: marquee 20s linear infinite;
+  color: hsl(var(--rose-primary));
+  fill: hsl(var(--rose-primary));
 }
 
 /* Image hover zoom */
@@ -79,19 +69,19 @@
   animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Gold separator line */
-.gold-line {
+/* Rose separator line */
+.rose-line {
   width: 60px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, hsl(var(--gold)), transparent);
+  background: linear-gradient(90deg, transparent, hsl(var(--rose-primary)), transparent);
 }
 
 /* Promo code copy animation */
-@keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--gold) / 0.4); }
-  50% { box-shadow: 0 0 0 6px hsl(var(--gold) / 0); }
+@keyframes pulse-rose {
+  0%, 100% { box-shadow: 0 0 0 0 hsl(var(--rose-primary) / 0.4); }
+  50% { box-shadow: 0 0 0 6px hsl(var(--rose-primary) / 0); }
 }
 
-.pulse-gold {
-  animation: pulse-gold 2s ease-in-out infinite;
+.pulse-rose {
+  animation: pulse-rose 2s ease-in-out infinite;
 }

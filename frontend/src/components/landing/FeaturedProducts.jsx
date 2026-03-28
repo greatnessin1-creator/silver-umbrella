@@ -48,7 +48,7 @@ export const FeaturedProducts = () => {
     <section
       id="featured-products"
       data-testid="featured-products-section"
-      className="relative bg-[hsl(var(--background))]"
+      className="relative bg-white"
     >
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
         <motion.div
@@ -58,13 +58,13 @@ export const FeaturedProducts = () => {
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
         >
-          <p className="font-body text-xs tracking-[0.2em] uppercase text-[hsl(var(--gold))] mb-4">
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-[hsl(var(--rose-primary))] mb-4">
             Our Collection
           </p>
           <h2 className="font-display text-3xl sm:text-4xl font-medium tracking-[-0.01em] text-[hsl(var(--foreground))]">
             Featured Products
           </h2>
-          <div className="gold-line mx-auto mt-6" />
+          <div className="rose-line mx-auto mt-6" />
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
@@ -77,9 +77,9 @@ export const FeaturedProducts = () => {
               viewport={{ once: true, margin: '-30px' }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="group rounded-2xl bg-[hsl(var(--card))] border border-[hsl(var(--border))] shadow-[0_10px_30px_-18px_rgba(20,16,12,0.35)] transition-all duration-300 hover:border-[hsl(var(--gold)/0.35)] hover:shadow-[0_18px_50px_-26px_rgba(20,16,12,0.45)] h-full flex flex-col">
+              <Card className="group rounded-2xl bg-white border border-[hsl(var(--border))] shadow-[0_10px_30px_-18px_rgba(20,16,12,0.2)] transition-all duration-300 hover:border-[hsl(var(--rose-primary)/0.35)] hover:shadow-[0_18px_50px_-26px_rgba(20,16,12,0.35)] h-full flex flex-col">
                 <div className="relative overflow-hidden rounded-t-2xl">
-                  <div className="aspect-[4/5] bg-[hsl(var(--sand))]">
+                  <div className="aspect-[4/5] bg-[hsl(var(--secondary))]">
                     <img
                       src={product.image}
                       alt={product.alt}
@@ -88,7 +88,7 @@ export const FeaturedProducts = () => {
                     />
                   </div>
                   {product.badge && (
-                    <Badge className="absolute top-3 left-3 bg-[hsl(var(--gold-soft))] text-[hsl(var(--espresso))] border-none font-body text-xs font-medium px-3 py-1">
+                    <Badge className="absolute top-3 left-3 bg-[hsl(var(--rose-soft))] text-[hsl(var(--plum))] border-none font-body text-xs font-medium px-3 py-1">
                       {product.badge}
                     </Badge>
                   )}
@@ -107,7 +107,7 @@ export const FeaturedProducts = () => {
                     <Button
                       data-testid="product-card-shop-link"
                       asChild
-                      className="w-full bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:bg-[hsl(var(--primary)/0.92)] rounded-xl py-5 text-sm font-body font-medium tracking-wide transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98]"
+                      className="w-full bg-[hsl(var(--rose-medium))] text-white hover:bg-[hsl(var(--rose-medium)/0.9)] rounded-xl py-5 text-sm font-body font-medium tracking-wide transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98]"
                     >
                       <a
                         href={product.url}
