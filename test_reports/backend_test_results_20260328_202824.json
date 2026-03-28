@@ -1,0 +1,130 @@
+{
+  "timestamp": "20260328_202824",
+  "summary": {
+    "tests_run": 7,
+    "tests_passed": 5,
+    "tests_failed": 2,
+    "success_rate": 71.4
+  },
+  "test_results": [
+    {
+      "test_name": "Health Check",
+      "endpoint": "health",
+      "method": "GET",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "status": "healthy",
+        "database": "connected"
+      },
+      "error": null
+    },
+    {
+      "test_name": "Root API",
+      "endpoint": "",
+      "method": "GET",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "message": "Pura Livn API"
+      },
+      "error": null
+    },
+    {
+      "test_name": "Contact Form - Valid Submission",
+      "endpoint": "contact",
+      "method": "POST",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "success": true,
+        "message": "Thank you! We'll get back to you soon.",
+        "id": "f040a437-a213-4734-87e8-629ca5d59d67"
+      },
+      "error": null
+    },
+    {
+      "test_name": "Contact Form - Missing Name",
+      "endpoint": "contact",
+      "method": "POST",
+      "expected_status": 200,
+      "actual_status": 422,
+      "success": false,
+      "response_data": {
+        "detail": [
+          {
+            "type": "string_too_short",
+            "loc": [
+              "body",
+              "name"
+            ],
+            "msg": "String should have at least 1 character",
+            "input": "",
+            "ctx": {
+              "min_length": 1
+            },
+            "url": "https://errors.pydantic.dev/2.12/v/string_too_short"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "test_name": "Contact Form - Invalid Email",
+      "endpoint": "contact",
+      "method": "POST",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "success": false,
+        "message": "Please enter a valid email address.",
+        "id": null
+      },
+      "error": null
+    },
+    {
+      "test_name": "Contact Form - Missing Message",
+      "endpoint": "contact",
+      "method": "POST",
+      "expected_status": 200,
+      "actual_status": 422,
+      "success": false,
+      "response_data": {
+        "detail": [
+          {
+            "type": "string_too_short",
+            "loc": [
+              "body",
+              "message"
+            ],
+            "msg": "String should have at least 1 character",
+            "input": "",
+            "ctx": {
+              "min_length": 1
+            },
+            "url": "https://errors.pydantic.dev/2.12/v/string_too_short"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "test_name": "Contact Form - Honeypot Detection",
+      "endpoint": "contact",
+      "method": "POST",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "success": true,
+        "message": "Thank you for your message!",
+        "id": null
+      },
+      "error": null
+    }
+  ]
+}
