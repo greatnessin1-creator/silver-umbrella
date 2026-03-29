@@ -1,16 +1,16 @@
-import "@/App.css";
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Toaster } from "@/components/ui/sonner";
-import { PromoBar } from "@/components/landing/PromoBar";
-import { Hero } from "@/components/landing/Hero";
-import { Mission } from "@/components/landing/Mission";
-import { FeaturedProducts } from "@/components/landing/FeaturedProducts";
-import { Benefits } from "@/components/landing/Benefits";
-import { SupportSection } from "@/components/landing/SupportSection";
-import { Testimonials } from "@/components/landing/Testimonials";
-import { BlogHighlights } from "@/components/landing/BlogHighlights";
-import { ContactForm } from "@/components/landing/ContactForm";
-import { Footer } from "@/components/landing/Footer";
+
+import { PromoBar } from "./components/landing/PromoBar";
+import { Hero } from "./components/landing/Hero";
+import { Mission } from "./components/landing/Mission";
+import { FeaturedProducts } from "./components/landing/FeaturedProducts";
+import { Benefits } from "./components/landing/Benefits";
+import { SupportSection } from "./components/landing/SupportSection";
+import { Testimonials } from "./components/landing/Testimonials";
+import { BlogHighlights } from "./components/landing/BlogHighlights";
+import { ContactForm } from "./components/landing/ContactForm";
+import { Footer } from "./components/landing/Footer";
 
 const LandingPage = () => {
   return (
@@ -37,7 +37,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
         </Routes>
       </BrowserRouter>
-      <Toaster position="top-center" richColors />
+    
     </div>
   );
 }
