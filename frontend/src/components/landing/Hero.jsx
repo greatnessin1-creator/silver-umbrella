@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Button } from '../ui/button';
 import { ArrowRight, Shield, Truck, Moon } from 'lucide-react';
@@ -108,20 +107,12 @@ export const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(20,16,12,0.25)] border border-[hsl(var(--rose-primary)/0.12)] bg-black">
+            <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(20,16,12,0.25)] border border-[hsl(var(--rose-primary)/0.12)] bg-white">
               <img
                 src="/magnesium-ad.png"
                 alt="Magnesium Glycinate Capsules"
                 className="w-full h-full object-cover"
               />
-
-              <div className="absolute inset-0 flex flex-col justify-start items-center text-center px-6 pt-10">
-                <h3 className="text-white text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
-                  No More Wired,
-                  <br />
-                  Restless Energy Spikes
-                </h3>
-              </div>
             </div>
           </motion.div>
         </div>
