@@ -8,7 +8,6 @@ export const Hero = () => {
 
       <div className="relative mx-auto max-w-6xl px-4 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* LEFT SIDE */}
           <div className="flex flex-col gap-6">
             <p className="text-xs uppercase tracking-[0.25em] text-rose-400">
               Pura Livn Wellness & Beauty
@@ -23,8 +22,7 @@ export const Hero = () => {
 
             <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
               Simple wellness and beauty essentials designed to support calm,
-              confidence, and everyday self-care — so your routine feels good
-              and looks beautiful.
+              confidence, and everyday self-care.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
@@ -32,7 +30,7 @@ export const Hero = () => {
                 asChild
                 className="bg-rose-500 hover:bg-rose-600 text-white px-8 py-6 rounded-xl text-sm font-semibold"
               >
-                <a href="#featured-products">
+                <a href="https://puralivn.com/products/magnesium-glycinate-capsules-90-count-daily-supplement">
                   Shop Best Sellers
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
@@ -43,7 +41,7 @@ export const Hero = () => {
                 variant="outline"
                 className="border-rose-200 text-gray-900 hover:bg-rose-50 px-8 py-6 rounded-xl text-sm font-semibold"
               >
-                <a href="#mission-section">
+                <a href="https://puralivn.com/products/magnesium-glycinate-capsules-90-count-daily-supplement">
                   Explore Wellness
                 </a>
               </Button>
@@ -65,11 +63,10 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE IMAGE */}
           <div className="relative">
             <div className="rounded-[28px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-rose-100 bg-white">
               <img
-                src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80"
+                src="/magnesium-ad.png"
                 alt="Soft wellness and beauty lifestyle"
                 className="w-full h-[520px] object-cover"
               />
