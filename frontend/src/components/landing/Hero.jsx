@@ -22,7 +22,11 @@ export const Hero = () => {
       <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-6 flex flex-col items-start">
-            <motion.div initial="hidden" animate="visible" className="flex flex-col items-start gap-6">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              className="flex flex-col items-start gap-6"
+            >
               <motion.p
                 custom={0}
                 variants={fadeUp}
@@ -103,20 +107,19 @@ export const Hero = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(20,16,12,0.25)] border border-[hsl(var(--rose-primary)/0.12)] bg-[linear-gradient(160deg,#fff_0%,#fdf5f8_55%,#f8e7ee_100%)] min-h-[520px] flex items-center justify-center p-8">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[hsl(var(--rose-primary)/0.12)] to-transparent" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-[hsl(var(--rose-primary)/0.08)] to-transparent" />
+            <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(20,16,12,0.25)] border border-[hsl(var(--rose-primary)/0.12)] bg-black">
+              <img
+                src="/magnesium-ad.png"
+                alt="Magnesium Glycinate Capsules"
+                className="w-full h-full object-cover"
+              />
 
-              <div className="relative z-10 max-w-md text-center">
-                <div className="mx-auto mb-6 w-20 h-20 rounded-full bg-[hsl(var(--rose-soft))] flex items-center justify-center">
-                  <Moon className="w-8 h-8 text-[hsl(var(--rose-primary))]" strokeWidth={1.75} />
-                </div>
-                <h3 className="font-display text-3xl sm:text-4xl text-[hsl(var(--foreground))] mb-4">
-                  Magnesium Glycinate
+              <div className="absolute inset-0 flex flex-col justify-start items-center text-center px-6 pt-10">
+                <h3 className="text-white text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
+                  No More Wired,
+                  <br />
+                  Restless Energy Spikes
                 </h3>
-                <p className="font-body text-[hsl(var(--muted-foreground))] leading-relaxed">
-                  A simple daily supplement for calmer evenings, better rest, and steady wellness support.
-                </p>
               </div>
             </div>
           </motion.div>
