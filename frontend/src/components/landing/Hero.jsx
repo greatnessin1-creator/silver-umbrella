@@ -25,10 +25,7 @@ export const Hero = () => {
             This highly absorbable magnesium formula is designed to support deep sleep,
             calm your nervous system, and help your body recover faster — without grogginess.
           </p>
-<div className="flex items-center gap-3 mt-4">
-  <span className="text-lg text-gray-400 line-through">$49.99</span>
-  <span className="text-2xl font-semibold text-gray-900">$29.99</span>
-</div>
+
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-4 mt-2">
             <Button
