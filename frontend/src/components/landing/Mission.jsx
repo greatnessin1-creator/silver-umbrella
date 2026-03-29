@@ -1,98 +1,45 @@
 import { motion } from 'framer-motion';
-import { Card, CardContent } from '../ui/card';
-import { Heart, Leaf } from 'lucide-react';
 
 export const Mission = () => {
   return (
     <section
       id="mission-section"
       data-testid="mission-section"
-      className="relative bg-[hsl(var(--secondary))] noise-overlay"
+      className="relative bg-white"
     >
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          {/* Left: Title + Mission */}
-          <motion.div
-            className="lg:col-span-5"
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-[hsl(var(--rose-primary))] mb-4">
-              Our Mission
-            </p>
-            <h2 className="font-display text-3xl sm:text-4xl font-medium tracking-[-0.01em] text-[hsl(var(--foreground))] mb-6 leading-tight">
-              Beauty Starts with Skincare
-            </h2>
-            <div className="rose-line mb-8" />
-            <p className="font-display italic text-lg sm:text-xl text-[hsl(var(--muted-foreground))] leading-relaxed">
-              At PuraLivn, our mission is to empower confidence through self-care — creating
-              products that nourish your skin, enhance your natural beauty, and make you feel
-              your best every single day.
-            </p>
-          </motion.div>
+      <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 text-center">
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6 }}
+          className="font-body text-xs tracking-[0.2em] uppercase text-[hsl(var(--rose-primary))] mb-4"
+        >
+          Why Pura Livn
+        </motion.p>
 
-          {/* Vertical rule */}
-          <div className="hidden lg:flex lg:col-span-1 justify-center">
-            <div className="w-px h-full bg-gradient-to-b from-transparent via-[hsl(var(--rose-primary)/0.3)] to-transparent" />
-          </div>
+        <motion.h2
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6, delay: 0.08 }}
+          className="font-display text-3xl sm:text-4xl font-medium tracking-[-0.01em] text-[hsl(var(--foreground))] mb-6"
+        >
+          Simple Wellness You Can Actually Stick With
+        </motion.h2>
 
-          {/* Right: Cards */}
-          <div className="lg:col-span-6 flex flex-col gap-5">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-            >
-              <Card className="rounded-2xl bg-white border border-[hsl(var(--border))] shadow-[0_10px_30px_-18px_rgba(20,16,12,0.2)] transition-colors duration-200 hover:border-[hsl(var(--rose-primary)/0.35)]">
-                <CardContent className="p-6 sm:p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[hsl(var(--rose-soft))] flex items-center justify-center">
-                      <Heart className="w-5 h-5 text-[hsl(var(--rose-primary))]" strokeWidth={1.5} />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-xl font-medium text-[hsl(var(--foreground))] mb-2">
-                        Our Promise
-                      </h3>
-                      <p className="font-body text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">
-                        Every product is crafted with intention — designed to support your self-care
-                        ritual and help you feel radiant, confident, and deeply nourished.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+        <div className="rose-line mx-auto mb-8" />
 
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <Card className="rounded-2xl bg-white border border-[hsl(var(--border))] shadow-[0_10px_30px_-18px_rgba(20,16,12,0.2)] transition-colors duration-200 hover:border-[hsl(var(--rose-primary)/0.35)]">
-                <CardContent className="p-6 sm:p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[hsl(var(--rose-soft))] flex items-center justify-center">
-                      <Leaf className="w-5 h-5 text-[hsl(var(--rose-primary))]" strokeWidth={1.5} />
-                    </div>
-                    <div>
-                      <h3 className="font-display text-xl font-medium text-[hsl(var(--foreground))] mb-2">
-                        Ingredients & Ritual
-                      </h3>
-                      <p className="font-body text-sm text-[hsl(var(--muted-foreground))] leading-relaxed">
-                        Collagen-infused, deeply moisturizing formulas paired with targeted massage
-                        techniques for smoother, firmer, more refreshed skin.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          </div>
-        </div>
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.6, delay: 0.16 }}
+          className="font-body text-base sm:text-lg text-[hsl(var(--muted-foreground))] leading-relaxed max-w-3xl mx-auto"
+        >
+          We believe daily routines should feel simple, supportive, and realistic. Our magnesium formula
+          is designed to fit easily into your day while supporting rest, recovery, and everyday balance.
+        </motion.p>
       </div>
     </section>
   );
