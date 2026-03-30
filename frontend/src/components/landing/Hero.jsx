@@ -4,11 +4,16 @@ import { ArrowRight, Shield, Truck, Sparkles } from 'lucide-react';
 export const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(244,114,182,0.10),transparent_35%),radial-gradient(circle_at_top_right,rgba(251,207,232,0.18),transparent_40%)]" />
+
+      {/* Soft background glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(244,114,182,0.08),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(251,207,232,0.12),transparent_40%)]" />
 
       <div className="relative mx-auto max-w-6xl px-4 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+          {/* LEFT SIDE */}
           <div className="flex flex-col gap-6">
+
             <p className="text-xs uppercase tracking-[0.25em] text-rose-400">
               Pura Livn Wellness & Beauty
             </p>
@@ -22,9 +27,11 @@ export const Hero = () => {
 
             <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
               Simple wellness and beauty essentials designed to support calm,
-              confidence, and everyday self-care.
+              confidence, and everyday self-care — so your routine feels as good
+              as it looks.
             </p>
 
+            {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button
                 asChild
@@ -47,31 +54,38 @@ export const Hero = () => {
               </Button>
             </div>
 
+            {/* TRUST ROW */}
             <div className="flex flex-wrap gap-6 pt-4 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <Truck className="w-4 h-4 text-rose-400" />
-                <span>Free Shipping</span>
+                Free Shipping
               </div>
               <div className="flex items-center gap-2">
                 <Sparkles className="w-4 h-4 text-rose-400" />
-                <span>Wellness & Beauty Essentials</span>
+                Premium Wellness Essentials
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4 text-rose-400" />
-                <span>Secure Checkout</span>
+                Secure Checkout
               </div>
+            </div>
+
+          </div>
+
+          {/* RIGHT SIDE IMAGE */}
+          <div className="relative">
+            <div className="rounded-[28px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.06)] border border-rose-100 bg-white">
+
+              <img
+                src="/hero-wellness.jpg"
+                alt="Pura Livn wellness lifestyle"
+                className="w-full h-[520px] object-cover brightness-105 contrast-95"
+                loading="eager"
+              />
+
             </div>
           </div>
 
-          <div className="relative">
-            <div className="rounded-[28px] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-rose-100 bg-white">
-              <img
-                src="/magnesium-ad.png"
-                alt="Soft wellness and beauty lifestyle"
-                className="w-full h-[520px] object-cover"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </section>
